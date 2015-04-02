@@ -34,7 +34,7 @@ class Spintax:
 
 		# Ensure method arguments are lists, then build the spun string
 		try:
-			if (isinstance(list_to_spin, list) and isinstance(bracket_list, list) and isinstance(delimiter, basestring)):
+			if (isinstance(list_to_spin, list) and isinstance(bracket_list, list) and isinstance(delimiter, str)):
 				for item in list_to_spin:
 					if (item == list_to_spin[0]):
 						spun_string += str(bracket_list[0]) + str(item) + delimiter
@@ -46,7 +46,7 @@ class Spintax:
 			return spun_string
 
 		except TypeError:
-			raise 'Arguments should contain two lists and a string.'
+			print('Arguments should contain two lists and a string.')
 
 	def get_spun_links(self, list_to_spin, links_to_spin, bracket_list, delimiter, link_type):
 		spun_string = self.get_spintax(list_to_spin, bracket_list, delimiter)
@@ -54,7 +54,7 @@ class Spintax:
 
 		# Ensure method arguments are lists, then build the spun strings
 		try:
-			if (isinstance(links_to_spin, list) and isinstance(link_type, basestring)):
+			if (isinstance(links_to_spin, list) and isinstance(link_type, str)):
 				for item in links_to_spin:
 					if (item == links_to_spin[0]):
 						spun_link += str(bracket_list[0]) + str(item) + delimiter
@@ -66,7 +66,7 @@ class Spintax:
 			return self.get_link(link_type, spun_string, spun_link)
 
 		except TypeError:
-			raise 'Arguments should contain three lists and two strings.'
+			print('Arguments should contain three lists and two strings.')
 
 	# Unspin spintax
 	def unspin(self, spun_string, delimiter):
@@ -92,7 +92,7 @@ class Spintax:
 			return bracket_types[bracket_type_name]
 
 		except:
-			raise 'There is no bracket type by that name.'
+			print('There is no bracket type by that name.')
 
 	# Convert a spun string to be URL friendly
 	def get_url_version(self, spun_string):
@@ -103,7 +103,7 @@ class Spintax:
 			return spun_string
 
 		except:
-			raise 'There was an error with the passed spun string, Be sure to only include alpha-numeric characters and spaces.'
+			print('There was an error with the passed spun string, Be sure to only include alpha-numeric characters and spaces.')
 
 	# A dictionary of all the link types
 	# Returns a formatted link of the passed link type

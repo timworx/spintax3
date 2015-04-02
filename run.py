@@ -86,16 +86,16 @@ def main():
 
 			# Determine which methods to use based on options and arguments passed
 			if (method_name == 'normal' or method_name == "get_spintax"):
-				print spintax.get_spintax(spin_list, spintax.get_bracket_type(bracket_type), delimiter)
+				print(spintax.get_spintax(spin_list, spintax.get_bracket_type(bracket_type), delimiter))
 
 			elif (method_name == 'url'):
-				print spintax.get_url_version(spintax.get_spintax(spin_list, spintax.get_bracket_type(bracket_type), delimiter))
+				print(spintax.get_url_version(spintax.get_spintax(spin_list, spintax.get_bracket_type(bracket_type), delimiter)))
 
 			elif (method_name == 'links'):
-				print spintax.get_spun_links(spin_list, link_list, spintax.get_bracket_type(bracket_type), delimiter, link_type)
+				print(spintax.get_spun_links(spin_list, link_list, spintax.get_bracket_type(bracket_type), delimiter, link_type))
 
 	except:
-		print 'Make sure you include the correct options for the method used.'
+		print('Make sure you include the correct options for the method used.')
 
 if __name__ == '__main__':
 	main()
