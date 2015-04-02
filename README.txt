@@ -1,3 +1,6 @@
+Tested and working with:
+Python 3.4 as well as Python 2.5, Python 2.6, Python 2.7 
+
 **Spintax3**
 
 Spintax3 is a port of https://github.com/rexibit/spintax for Python 3.
