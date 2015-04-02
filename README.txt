@@ -1,3 +1,8 @@
+**Spintax3**
+
+Spintax3 is a port of https://github.com/rexibit/spintax for Python 3.
+For the time being, It will follow the original code as precisely as possibly. Only changes required for Python3 will be made.
+
 **Spintax**
 
 Spintax is a great way to mad-lib or easily alter parts of text for reuse.
